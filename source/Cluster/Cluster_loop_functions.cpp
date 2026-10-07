@@ -124,14 +124,14 @@ void Cluster_loop_functions::Init(argos::TConfigurationNode &node) {
 	ForageRangeY.Set(-rangeY, rangeY);
 
 	// Send a pointer to this loop functions object to each controller.
-	argos::CSpace::TMapPerType& footbots = GetSpace().GetEntitiesByType("foot-bot");
+	argos::CSpace::TMapPerType& footbots = GetSpace().GetEntitiesByType("e-puck");
 	argos::CSpace::TMapPerType::iterator it;
 
     Num_robots = footbots.size();
     RobotsReturnedToNest = 0;
     LastProcessedLocationIndex = 0;
 	for(it = footbots.begin(); it != footbots.end(); it++) {
-		argos::CFootBotEntity& footBot = *argos::any_cast<argos::CFootBotEntity*>(it->second);
+		argos::CEPuckEntity& footBot = *argos::any_cast<argos::CEPuckEntity*>(it->second);
 		BaseController& c = dynamic_cast<BaseController&>(footBot.GetControllableEntity().GetController());
 		Cluster_controller& c2 = dynamic_cast<Cluster_controller&>(c);
 
@@ -182,11 +182,11 @@ void Cluster_loop_functions::Reset() {
 	numSyntheticPoints = 0;
 
 	SetFoodDistribution();
-	argos::CSpace::TMapPerType& footbots = GetSpace().GetEntitiesByType("foot-bot");
+	argos::CSpace::TMapPerType& footbots = GetSpace().GetEntitiesByType("e-puck");
 	argos::CSpace::TMapPerType::iterator it;
 
 	for(it = footbots.begin(); it != footbots.end(); it++) {
-		argos::CFootBotEntity& footBot = *argos::any_cast<argos::CFootBotEntity*>(it->second);
+		argos::CEPuckEntity& footBot = *argos::any_cast<argos::CEPuckEntity*>(it->second);
 		BaseController& c = dynamic_cast<BaseController&>(footBot.GetControllableEntity().GetController());
 		Cluster_controller& c2 = dynamic_cast<Cluster_controller&>(c);
 
@@ -597,7 +597,7 @@ bool Cluster_loop_functions::IsCollidingWithFood(argos::CVector2 p) {
 }
 
 unsigned int Cluster_loop_functions::getNumberOfRobots() {
-	return GetSpace().GetEntitiesByType("foot-bot").size();
+	return GetSpace().GetEntitiesByType("e-puck").size();
 }
 
 double Cluster_loop_functions::getProbabilityOfSwitchingToSearching() {

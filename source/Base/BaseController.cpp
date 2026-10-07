@@ -189,11 +189,14 @@ void BaseController::SetNextMovement() {
 }
 
 void BaseController::SetTargetAngleDistance(argos::Real newAngleToTurnInDegrees) {
-	// s = arc_length = robot_radius * turning_angle
-	// NOTE: the footbot robot has a radius of 0.085 m... or 8.5 cm...
-	// adjusting with + 0.02 m, or + 2 cm, increases accuracy...
-	
-	argos::Real s = 0.105 * newAngleToTurnInDegrees;
+	// Spinning in place, each wheel travels an arc length s = (interwheel_distance / 2) * angle_in_radians.
+	// e-puck's interwheel distance is 0.053 m (5.3 cm), so the per-degree constant is
+	// PI * interwheel_distance_cm / 360 = PI * 5.3 / 360 ~= 0.0462.
+	// (The previous constant, 0.105, was footbot's empirically-tuned value for its ~0.085 m body
+	// radius; using it for e-puck made every commanded turn overshoot by roughly 2.3x, which kept
+	// robots oscillating between LEFT/RIGHT and never converging to FORWARD.)
+
+	argos::Real s = 0.0462 * newAngleToTurnInDegrees;
 	TicksToWaitWhileMoving = std::ceil((SimulationTicksPerSecond() * s) / RobotRotationSpeed);
 }
 
@@ -324,7 +327,7 @@ bool BaseController::CollisionDetection() {
 
 argos::CVector2 BaseController::GetCollisionVector() {
 	/* Get readings from proximity sensor */
-	const argos::CCI_FootBotProximitySensor::TReadings& proximityReadings = proximitySensor->GetReadings();
+	const argos::CCI_EPuckProximitySensor::TReadings& proximityReadings = proximitySensor->GetReadings();
 
 	/* Sum them together */
 	argos::CVector2 collisionVector;

@@ -24,7 +24,7 @@ target_link_libraries(  Cluster_loop_functions
                         Cluster_controller
                         argos3core_simulator
                         argos3plugin_simulator_entities
-                        argos3plugin_simulator_footbot
+                        argos3plugin_simulator_epuck
                         argos3plugin_simulator_genericrobot
                         argos3plugin_simulator_qtopengl
                         ${ARGOS_QTOPENGL_LIBRARIES})

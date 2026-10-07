@@ -22,7 +22,7 @@ CPFA_controller::CPFA_controller() :
 void CPFA_controller::Init(argos::TConfigurationNode &node) {
 	compassSensor   = GetSensor<argos::CCI_PositioningSensor>("positioning");
 	wheelActuator   = GetActuator<argos::CCI_DifferentialSteeringActuator>("differential_steering");
-	proximitySensor = GetSensor<argos::CCI_FootBotProximitySensor>("footbot_proximity");
+	proximitySensor = GetSensor<argos::CCI_EPuckProximitySensor>("epuck_proximity");
 	argos::TConfigurationNode settings = argos::GetNode(node, "settings");
 
 	argos::GetNodeAttribute(settings, "FoodDistanceTolerance",   FoodDistanceTolerance);

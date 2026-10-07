@@ -38,7 +38,7 @@ Cluster_controller::Cluster_controller() :
 void Cluster_controller::Init(argos::TConfigurationNode &node) {
 	compassSensor   = GetSensor<argos::CCI_PositioningSensor>("positioning");
 	wheelActuator   = GetActuator<argos::CCI_DifferentialSteeringActuator>("differential_steering");
-	proximitySensor = GetSensor<argos::CCI_FootBotProximitySensor>("footbot_proximity");
+	proximitySensor = GetSensor<argos::CCI_EPuckProximitySensor>("epuck_proximity");
 	argos::TConfigurationNode settings = argos::GetNode(node, "settings");
 
 	argos::GetNodeAttribute(settings, "FoodDistanceTolerance",   FoodDistanceTolerance);
@@ -303,6 +303,7 @@ void Cluster_controller::SetLoopFunctions(Cluster_loop_functions* lf) {
 }
 
 void Cluster_controller::Departing() {
+	
 	argos::Real distanceToTarget = (GetPosition() - GetTarget()).Length();
 	argos::Real randomNumber = RNG->Uniform(argos::CRange<argos::Real>(0.0, 1.0));
 
@@ -592,6 +593,7 @@ void Cluster_controller::Searching() {
 // Cause the robot to rotate in place as if surveying the surrounding targets
 // Turns 36 times by 10 degrees
 void Cluster_controller::Surveying() {
+	cout << GetId() << endl;
 	if (survey_count <= 4) { 
 		CRadians rotation(survey_count*3.14/2); // divide by 10 so the vecot is small and the linear motion is minimized
 		argos::CVector2 turn_vector(SearchStepSize, rotation.SignedNormalize());
@@ -678,7 +680,7 @@ void Cluster_controller::Returning() {
 		// trails, or random search.
 		ofstream log_output_stream;
 		log_output_stream.open("Cluster_log.txt", ios::app);
-		log_output_stream << "At the nest." << endl;	    
+		log_output_stream << "At the nest." << GetId() << endl;	    
 		 
 		// use site fidelity
 		if((updateFidelity == true) && (poissonCDF_sFollowRate > r2)) {

@@ -7,11 +7,11 @@
 Cluster_qt_user_functions::Cluster_qt_user_functions() :
 	loopFunctions(dynamic_cast<Cluster_loop_functions&>(CSimulator::GetInstance().GetLoopFunctions()))
 {
-	RegisterUserFunction<Cluster_qt_user_functions, CFootBotEntity>(&Cluster_qt_user_functions::DrawOnRobot);
+	RegisterUserFunction<Cluster_qt_user_functions, CEPuckEntity>(&Cluster_qt_user_functions::DrawOnRobot);
 	RegisterUserFunction<Cluster_qt_user_functions, CFloorEntity>(&Cluster_qt_user_functions::DrawOnArena);
 }
 
-void Cluster_qt_user_functions::DrawOnRobot(CFootBotEntity& entity) {
+void Cluster_qt_user_functions::DrawOnRobot(CEPuckEntity& entity) {
 	Cluster_controller& c = dynamic_cast<Cluster_controller&>(entity.GetControllableEntity().GetController());
 
 	if(c.IsHoldingFood() == true) {
@@ -143,7 +143,7 @@ void Cluster_qt_user_functions::DrawPheromones() {
 
 void Cluster_qt_user_functions::DrawLowClusterTargets() {
 	CSpace& space = CSimulator::GetInstance().GetSpace();
-	CSpace::TMapPerType& footbots = space.GetEntitiesByType("foot-bot");
+	CSpace::TMapPerType& footbots = space.GetEntitiesByType("e-puck");
 
 	// Draw on the top left corner the current count of clusters
 	char buffer[50];
@@ -164,7 +164,7 @@ void Cluster_qt_user_functions::DrawLowClusterTargets() {
 		// Blue line from the robot's current position to the target.
 		CSpace::TMapPerType::iterator fbIt = footbots.find(robotID);
 		if(fbIt != footbots.end()) {
-			CFootBotEntity& fb      = *any_cast<CFootBotEntity*>(fbIt->second);
+			CEPuckEntity& fb      = *any_cast<CEPuckEntity*>(fbIt->second);
 			CVector3        robotPos = fb.GetEmbodiedEntity().GetOriginAnchor().Position;
 			DrawRay(CRay3(CVector3(robotPos.GetX(), robotPos.GetY(), 0.01),
 			              CVector3(target.GetX(),   target.GetY(),   0.01)),

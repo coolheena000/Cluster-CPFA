@@ -17,7 +17,7 @@ add_library(Pheromone      SHARED Pheromone.h
 
 target_link_libraries(BaseController
                       argos3core_simulator
-                      argos3plugin_simulator_footbot
+                      argos3plugin_simulator_epuck
                       argos3plugin_simulator_genericrobot)
 
 target_link_libraries(Food)
@@ -27,8 +27,8 @@ target_link_libraries(Pheromone)
 # some notes...
 #     argos3core_simulator
 #         = required for ARGoS integration
-#     argos3plugin_simulator_footbot
-#         = required for footbot sensors/actuators
+#     argos3plugin_simulator_epuck
+#         = required for e-puck sensors/actuators
 #     argos3plugin_genericrobot
 #         = required for general sensors/actuators
 ###############################################

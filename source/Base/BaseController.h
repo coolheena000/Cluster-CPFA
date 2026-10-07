@@ -5,7 +5,7 @@
 #include <argos3/core/control_interface/ci_controller.h>
 #include <argos3/plugins/robots/generic/control_interface/ci_positioning_sensor.h>
 #include <argos3/plugins/robots/generic/control_interface/ci_differential_steering_actuator.h>
-#include <argos3/plugins/robots/foot-bot/control_interface/ci_footbot_proximity_sensor.h>
+#include <argos3/plugins/robots/e-puck/control_interface/ci_epuck_proximity_sensor.h>
 #include <argos3/core/simulator/loop_functions.h>
 #include <cmath>
 #include <stack>
@@ -68,10 +68,10 @@ class BaseController : public argos::CCI_Controller {
 		argos::Real RobotRotationSpeed;
 		argos::Real TicksToWaitWhileMoving;
 
-		// foot-bot components: sensors and actuators
+		// e-puck components: sensors and actuators
 		argos::CCI_PositioningSensor* compassSensor;
 		argos::CCI_DifferentialSteeringActuator* wheelActuator;
-		argos::CCI_FootBotProximitySensor* proximitySensor;
+		argos::CCI_EPuckProximitySensor* proximitySensor;
 
 		// controller state variables
 		enum MovementState {

@@ -7,11 +7,11 @@
 CPFA_qt_user_functions::CPFA_qt_user_functions() :
 	loopFunctions(dynamic_cast<CPFA_loop_functions&>(CSimulator::GetInstance().GetLoopFunctions()))
 {
-	RegisterUserFunction<CPFA_qt_user_functions, CFootBotEntity>(&CPFA_qt_user_functions::DrawOnRobot);
+	RegisterUserFunction<CPFA_qt_user_functions, CEPuckEntity>(&CPFA_qt_user_functions::DrawOnRobot);
 	RegisterUserFunction<CPFA_qt_user_functions, CFloorEntity>(&CPFA_qt_user_functions::DrawOnArena);
 }
 
-void CPFA_qt_user_functions::DrawOnRobot(CFootBotEntity& entity) {
+void CPFA_qt_user_functions::DrawOnRobot(CEPuckEntity& entity) {
 	CPFA_controller& c = dynamic_cast<CPFA_controller&>(entity.GetControllableEntity().GetController());
 
 	if(c.IsHoldingFood() == true) {
