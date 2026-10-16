@@ -29,3 +29,25 @@ analysis*
 *.svg
 *.pdf
 *.log
+# Old Python prototypes for the physical robots (replaced by physical_cpp/)
+physical_robot/*.py
+physical_robot/__pycache__/
+
+# --- Physical e-puck2 C++ code ---
+# Track only source files in physical_cpp/ (not compiled programs, photos or backups).
+# These rules also override the CPFA* rule above for the CPFA_*.h headers.
+physical_cpp/*
+!physical_cpp/*.h
+!physical_cpp/*.cpp
+!physical_cpp/compile_flags.txt
+# Figures and printable AprilTag sheets (override *.png / *.svg above)
+!figures/*.png
+!figures/*.svg
+!tags_to_print/*.png
+# GCtronic firmware repos and flashing tools: keep only our flash scripts
+e-puck2_main-processor/
+e-puck2_python_wifi_multi/
+epuck2_main_flash/*
+!epuck2_main_flash/flash_main.sh
+epuck2_wifi_flash/*
+!epuck2_wifi_flash/flash_slow.sh

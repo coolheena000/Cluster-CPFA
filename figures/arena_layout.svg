@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1600" viewBox="0 0 1600 1600" font-family="Helvetica, Arial, sans-serif">
+<defs>
+<marker id="afg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d2420"/></marker>
+<marker id="adep" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2f6fb3"/></marker>
+<marker id="asea" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7a4fb0"/></marker>
+<marker id="asur" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c96f0c"/></marker>
+<marker id="aret" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2e7d4f"/></marker>
+</defs>
+<rect width="1600" height="1600" fill="#ffffff"/>
+<text x="170.0" y="70.0" font-size="40" font-weight="700" fill="#1d2420" text-anchor="start">Physical CPFA arena (top view)</text>
+<text x="170.0" y="110.0" font-size="21" font-weight="400" fill="#55625b" text-anchor="start">Overhead camera view: 4 e-puck2 robots, 16 food cubes (semi-clustered), nest in the centre</text>
+<rect x="756.0" y="140" width="88" height="46" rx="7" fill="#1d2420"/><circle cx="800.0" cy="163" r="14" fill="#fff"/><circle cx="800.0" cy="163" r="7" fill="#1d2420"/>
+<text x="860.0" y="170.0" font-size="19" font-weight="400" fill="#55625b" text-anchor="start">Overhead camera (AprilTag tag36h11)</text>
+<line x1="766.0" y1="186" x2="170.0" y2="234.0" stroke="#cfd6d1" stroke-dasharray="7 7"/><line x1="834.0" y1="186" x2="1430.0" y2="234.0" stroke="#cfd6d1" stroke-dasharray="7 7"/>
+<rect x="154.0" y="234.0" width="1292.0" height="872.0" rx="4" fill="#c9a46a"/>
+<rect x="170.0" y="250.0" width="1260.0" height="840.0" fill="#f3f5f2"/>
+<line x1="379.99999999999994" y1="250.0" x2="379.99999999999994" y2="1090.0" stroke="#dfe5e1"/>
+<line x1="590.0" y1="250.0" x2="590.0" y2="1090.0" stroke="#dfe5e1"/>
+<line x1="800.0" y1="250.0" x2="800.0" y2="1090.0" stroke="#dfe5e1"/>
+<line x1="1010.0" y1="250.0" x2="1010.0" y2="1090.0" stroke="#dfe5e1"/>
+<line x1="1220.0" y1="250.0" x2="1220.0" y2="1090.0" stroke="#dfe5e1"/>
+<line x1="170.0" y1="880.0000000000001" x2="1430.0" y2="880.0000000000001" stroke="#dfe5e1"/>
+<line x1="170.0" y1="670.0" x2="1430.0" y2="670.0" stroke="#dfe5e1"/>
+<line x1="170.0" y1="460.0" x2="1430.0" y2="460.0" stroke="#dfe5e1"/>
+<line x1="170.0" y1="1142.0" x2="1430.0" y2="1142.0" stroke="#55625b" stroke-width="1.5" marker-start="url(#afg)" marker-end="url(#afg)"/>
+<text x="800.0" y="1170.0" font-size="19" font-weight="400" fill="#55625b" text-anchor="middle">1.2 m (between corner tag centres)</text>
+<circle cx="800.0" cy="670.0" r="157.5" fill="#e3eee8" stroke="#2e7d4f" stroke-width="3" stroke-dasharray="10 6"/>
+<text x="800.0" y="678.0" font-size="22" font-weight="700" fill="#2e7d4f" text-anchor="middle" paint-order="stroke" stroke="#f3f5f2" stroke-width="6" stroke-linejoin="round">NEST</text>
+<text x="800.0" y="704.0" font-size="17" font-weight="400" fill="#2e7d4f" text-anchor="middle" paint-order="stroke" stroke="#f3f5f2" stroke-width="6" stroke-linejoin="round">r = 0.15 m</text>
+<rect x="150.0" y="230.0" width="40" height="40" fill="#111"/><rect x="158.0" y="238.0" width="10" height="10" fill="#fff"/><rect x="173.0" y="253.0" width="9" height="9" fill="#fff"/>
+<text x="170.0" y="220.0" font-size="18" font-weight="700" fill="#1d2420" text-anchor="middle">Tag 10</text>
+<rect x="1410.0" y="230.0" width="40" height="40" fill="#111"/><rect x="1418.0" y="238.0" width="10" height="10" fill="#fff"/><rect x="1433.0" y="253.0" width="9" height="9" fill="#fff"/>
+<text x="1430.0" y="220.0" font-size="18" font-weight="700" fill="#1d2420" text-anchor="middle">Tag 11</text>
+<rect x="1410.0" y="1070.0" width="40" height="40" fill="#111"/><rect x="1418.0" y="1078.0" width="10" height="10" fill="#fff"/><rect x="1433.0" y="1093.0" width="9" height="9" fill="#fff"/>
+<text x="1430.0" y="1060.0" font-size="18" font-weight="700" fill="#1d2420" text-anchor="middle">Tag 12</text>
+<rect x="150.0" y="1070.0" width="40" height="40" fill="#111"/><rect x="158.0" y="1078.0" width="10" height="10" fill="#fff"/><rect x="173.0" y="1093.0" width="9" height="9" fill="#fff"/>
+<text x="170.0" y="1060.0" font-size="18" font-weight="700" fill="#1d2420" text-anchor="middle">Tag 13</text>
+<rect x="1010.4999999999999" y="618.0" width="20" height="20" rx="3" fill="#e8902a" stroke="#7a4a08" stroke-width="1.5"/>
+<rect x="1168.0" y="618.0" width="20" height="20" rx="3" fill="#e8902a" stroke="#7a4a08" stroke-width="1.5"/>
+<rect x="1325.4999999999998" y="618.0" width="20" height="20" rx="3" fill="#e8902a" stroke="#7a4a08" stroke-width="1.5"/>
+<rect x="1010.4999999999999" y="460.5" width="20" height="20" rx="3" fill="#e8902a" stroke="#7a4a08" stroke-width="1.5"/>
+<rect x="1168.0" y="460.5" width="20" height="20" rx="3" fill="#e8902a" stroke="#7a4a08" stroke-width="1.5"/>
+<rect x="1325.4999999999998" y="460.5" width="20" height="20" rx="3" fill="#e8902a" stroke="#7a4a08" stroke-width="1.5"/>
+<rect x="1010.4999999999999" y="303.00000000000006" width="20" height="20" rx="3" fill="#e8902a" stroke="#7a4a08" stroke-width="1.5"/>
+<rect x="1168.0" y="303.00000000000006" width="20" height="20" rx="3" fill="#e8902a" stroke="#7a4a08" stroke-width="1.5"/>
+<rect x="1325.4999999999998" y="303.00000000000006" width="20" height="20" rx="3" fill="#e8902a" stroke="#7a4a08" stroke-width="1.5"/>
+<rect x="312.25" y="959.25" width="20" height="20" rx="3" fill="#e8902a" stroke="#7a4a08" stroke-width="1.5"/>
+<rect x="469.74999999999994" y="959.25" width="20" height="20" rx="3" fill="#e8902a" stroke="#7a4a08" stroke-width="1.5"/>
+<rect x="312.25" y="801.75" width="20" height="20" rx="3" fill="#e8902a" stroke="#7a4a08" stroke-width="1.5"/>
+<rect x="469.74999999999994" y="801.75" width="20" height="20" rx="3" fill="#e8902a" stroke="#7a4a08" stroke-width="1.5"/>
+<rect x="317.5" y="366.0" width="20" height="20" rx="3" fill="#e8902a" stroke="#7a4a08" stroke-width="1.5"/>
+<rect x="852.9999999999999" y="985.5" width="20" height="20" rx="3" fill="#e8902a" stroke="#7a4a08" stroke-width="1.5"/>
+<rect x="1304.4999999999998" y="964.5" width="20" height="20" rx="3" fill="#e8902a" stroke="#7a4a08" stroke-width="1.5"/>
+<text x="1178.0" y="293.0" font-size="17" font-weight="700" fill="#7a4a08" text-anchor="middle" paint-order="stroke" stroke="#f3f5f2" stroke-width="6" stroke-linejoin="round">3×3 cluster</text>
+<text x="401.0" y="1005.2" font-size="17" font-weight="700" fill="#7a4a08" text-anchor="middle" paint-order="stroke" stroke="#f3f5f2" stroke-width="6" stroke-linejoin="round">2×2 cluster</text>
+<path d="M1020.4999999999999,575.5 Q965.375,521.625 910.25,559.75" fill="none" stroke="#1f9a68" stroke-width="4" stroke-dasharray="2 9" stroke-linecap="round"/>
+<text x="863.0" y="386.5" font-size="18" font-weight="700" fill="#1f9a68" text-anchor="middle" paint-order="stroke" stroke="#f3f5f2" stroke-width="6" stroke-linejoin="round">pheromone trail (shared)</text>
+<circle cx="548.0" cy="565.0" r="36.75" fill="#fff" stroke="#2f6fb3" stroke-width="5"/>
+<rect x="537.0" y="554.0" width="22" height="22" fill="#111"/>
+<line x1="516.1735664109219" y1="546.625" x2="498.8530583352331" y2="536.625" stroke="#2f6fb3" stroke-width="4" marker-end="url(#adep)"/>
+<line x1="510.0" y1="543.0" x2="240.99999999999994" y2="360.0" stroke="#2f6fb3" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#adep)"/>
+<circle cx="232.99999999999994" cy="355.0" r="8" fill="none" stroke="#2f6fb3" stroke-width="2.5"/>
+<text x="249.0" y="343.0" font-size="16" font-weight="400" fill="#2f6fb3" text-anchor="start" paint-order="stroke" stroke="#f3f5f2" stroke-width="6" stroke-linejoin="round">random wall target</text>
+<text x="548.0" y="631.0" font-size="19" font-weight="700" fill="#2f6fb3" text-anchor="middle" paint-order="stroke" stroke="#f3f5f2" stroke-width="6" stroke-linejoin="round">R0 · tag 1 · DEPARTING</text>
+<line x1="1052.0" y1="754.0" x2="1115.0" y2="796.0" stroke="#7a4fb0" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
+<line x1="1115.0" y1="796.0" x2="1083.5" y2="859.0000000000001" stroke="#7a4fb0" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
+<line x1="1083.5" y1="859.0000000000001" x2="1146.5" y2="901.0" stroke="#7a4fb0" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
+<circle cx="1115.0" cy="796.0" r="5" fill="#7a4fb0"/>
+<circle cx="1083.5" cy="859.0000000000001" r="5" fill="#7a4fb0"/>
+<circle cx="1146.5" cy="901.0" r="5" fill="#7a4fb0"/>
+<circle cx="1052.0" cy="754.0" r="36.75" fill="#fff" stroke="#7a4fb0" stroke-width="5"/>
+<rect x="1041.0" y="743.0" width="22" height="22" fill="#111"/>
+<line x1="1077.9861742086057" y1="728.0138257913944" x2="1092.1283098323365" y2="713.8716901676635" stroke="#7a4fb0" stroke-width="4" marker-end="url(#asea)"/>
+<text x="1104.0" y="710.0" font-size="19" font-weight="700" fill="#7a4fb0" text-anchor="start" paint-order="stroke" stroke="#f3f5f2" stroke-width="6" stroke-linejoin="round">R1 · tag 2 · SEARCHING</text>
+<text x="1104.0" y="734.0" font-size="16" font-weight="400" fill="#7a4fb0" text-anchor="start" paint-order="stroke" stroke="#f3f5f2" stroke-width="6" stroke-linejoin="round">8 cm steps, 7° random turns</text>
+<circle cx="1178.0" cy="470.5" r="36.75" fill="#fff" stroke="#c96f0c" stroke-width="5"/>
+<rect x="1167.0" y="459.5" width="22" height="22" fill="#111"/>
+<line x1="1214.75" y1="470.5" x2="1234.75" y2="470.5" stroke="#c96f0c" stroke-width="4" marker-end="url(#asur)"/>
+<line x1="1178.0" y1="429.75" x2="1178.0" y2="411.75" stroke="#c96f0c" stroke-width="4" marker-end="url(#asur)"/>
+<line x1="1137.25" y1="470.5" x2="1119.25" y2="470.5" stroke="#c96f0c" stroke-width="4" marker-end="url(#asur)"/>
+<line x1="1178.0" y1="511.25" x2="1178.0" y2="529.25" stroke="#c96f0c" stroke-width="4" marker-end="url(#asur)"/>
+<text x="1178.0" y="556.5" font-size="19" font-weight="700" fill="#c96f0c" text-anchor="middle" paint-order="stroke" stroke="#f3f5f2" stroke-width="6" stroke-linejoin="round">R2 · tag 3 · SURVEYING</text>
+<text x="1178.0" y="580.5" font-size="16" font-weight="400" fill="#c96f0c" text-anchor="middle" paint-order="stroke" stroke="#f3f5f2" stroke-width="6" stroke-linejoin="round">turns 0°, 90°, 180°, 270°</text>
+<circle cx="569.0" cy="722.5" r="36.75" fill="#fff" stroke="#2e7d4f" stroke-width="5"/>
+<rect x="558.0" y="711.5" width="22" height="22" fill="#111"/>
+<line x1="602.3068111735969" y1="706.9687788810293" x2="620.4329669143299" y2="698.5164136462153" stroke="#2e7d4f" stroke-width="4" marker-end="url(#aret)"/>
+<rect x="557.0" y="659.75" width="20" height="20" rx="3" fill="#e8902a" stroke="#7a4a08" stroke-width="1.5"/>
+<line x1="627.75" y1="708.5" x2="663.5" y2="685.75" stroke="#2e7d4f" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#aret)"/>
+<text x="569.0" y="788.5" font-size="19" font-weight="700" fill="#2e7d4f" text-anchor="middle" paint-order="stroke" stroke="#f3f5f2" stroke-width="6" stroke-linejoin="round">R3 · tag 4 · RETURNING</text>
+<text x="569.0" y="812.5" font-size="16" font-weight="400" fill="#2e7d4f" text-anchor="middle" paint-order="stroke" stroke="#f3f5f2" stroke-width="6" stroke-linejoin="round">carries food to the nest</text>
+<text x="170.0" y="1226.0" font-size="24" font-weight="700" fill="#1d2420" text-anchor="start">One control tick, 8 times per second</text>
+<rect x="170.0" y="1250" width="282.0" height="104" rx="9" fill="#f5f7f6" stroke="#d3dad5" stroke-width="1.5"/>
+<text x="188.0" y="1284.0" font-size="19" font-weight="700" fill="#1d2420" text-anchor="start">Overhead camera</text>
+<text x="188.0" y="1312.0" font-size="16" font-weight="400" fill="#55625b" text-anchor="start">tags → x, y, heading</text>
+<text x="188.0" y="1336.0" font-size="16" font-weight="400" fill="#55625b" text-anchor="start">food cubes (tag 0)</text>
+<line x1="458.0" y1="1302" x2="490.0" y2="1302" stroke="#1d2420" stroke-width="2.5" marker-end="url(#afg)"/>
+<rect x="496.0" y="1250" width="282.0" height="104" rx="9" fill="#f5f7f6" stroke="#d3dad5" stroke-width="1.5"/>
+<text x="514.0" y="1284.0" font-size="19" font-weight="700" fill="#1d2420" text-anchor="start">Mac: run_four_robots</text>
+<text x="514.0" y="1312.0" font-size="16" font-weight="400" fill="#55625b" text-anchor="start">food / nest check, CPFA</text>
+<text x="514.0" y="1336.0" font-size="16" font-weight="400" fill="#55625b" text-anchor="start">collision → wheel speeds</text>
+<line x1="784.0" y1="1302" x2="816.0" y2="1302" stroke="#1d2420" stroke-width="2.5" marker-end="url(#afg)"/>
+<rect x="822.0" y="1250" width="282.0" height="104" rx="9" fill="#f5f7f6" stroke="#d3dad5" stroke-width="1.5"/>
+<text x="840.0" y="1284.0" font-size="19" font-weight="700" fill="#1d2420" text-anchor="start">Wi-Fi hotspot</text>
+<text x="840.0" y="1312.0" font-size="16" font-weight="400" fill="#55625b" text-anchor="start">21-byte command out</text>
+<text x="840.0" y="1336.0" font-size="16" font-weight="400" fill="#55625b" text-anchor="start">105-byte reply in</text>
+<line x1="1110.0" y1="1302" x2="1142.0" y2="1302" stroke="#1d2420" stroke-width="2.5" marker-end="url(#afg)"/>
+<rect x="1148.0" y="1250" width="282.0" height="104" rx="9" fill="#f5f7f6" stroke="#d3dad5" stroke-width="1.5"/>
+<text x="1166.0" y="1284.0" font-size="19" font-weight="700" fill="#1d2420" text-anchor="start">4 × e-puck2</text>
+<text x="1166.0" y="1312.0" font-size="16" font-weight="400" fill="#55625b" text-anchor="start">drive the motors</text>
+<text x="1166.0" y="1336.0" font-size="16" font-weight="400" fill="#55625b" text-anchor="start">send 8 IR values</text>
+<circle cx="184.0" cy="1413" r="12" fill="#fff" stroke="#2f6fb3" stroke-width="5"/>
+<text x="206.0" y="1420.0" font-size="18" font-weight="400" fill="#1d2420" text-anchor="start">DEPARTING</text>
+<circle cx="484.0" cy="1413" r="12" fill="#fff" stroke="#7a4fb0" stroke-width="5"/>
+<text x="506.0" y="1420.0" font-size="18" font-weight="400" fill="#1d2420" text-anchor="start">SEARCHING</text>
+<circle cx="784.0" cy="1413" r="12" fill="#fff" stroke="#c96f0c" stroke-width="5"/>
+<text x="806.0" y="1420.0" font-size="18" font-weight="400" fill="#1d2420" text-anchor="start">SURVEYING</text>
+<circle cx="1084.0" cy="1413" r="12" fill="#fff" stroke="#2e7d4f" stroke-width="5"/>
+<text x="1106.0" y="1420.0" font-size="18" font-weight="400" fill="#1d2420" text-anchor="start">RETURNING</text>
+<rect x="173.0" y="1446" width="22" height="22" rx="3" fill="#e8902a" stroke="#7a4a08" stroke-width="1.5"/>
+<text x="206.0" y="1464.0" font-size="18" font-weight="400" fill="#1d2420" text-anchor="start">Food cube (tag 0), pick-up radius 0.13 m</text>
+<rect x="773.0" y="1445" width="22" height="22" fill="#111"/>
+<text x="806.0" y="1464.0" font-size="18" font-weight="400" fill="#1d2420" text-anchor="start">Robot tags 1–4 · corner tags 10–13</text>
+<text x="170.0" y="1545.0" font-size="15" font-weight="400" fill="#55625b" text-anchor="start">Illustration of the planned setup: robot positions and paths are examples, not recorded data.</text>
+<text x="170.0" y="1568.0" font-size="15" font-weight="400" fill="#55625b" text-anchor="start">CPFA parameters as in Carlos's simulation: 0.504, 0.001, 7°, 0.28, 4.27, 3.75, 0.03. Food spacing 0.15 m.</text>
+</svg>
