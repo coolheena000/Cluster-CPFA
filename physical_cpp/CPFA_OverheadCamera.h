@@ -11,6 +11,7 @@
 //             11 = top-right    (+halfX, +halfY)
 //             12 = bottom-right (+halfX, -halfY)
 //             13 = bottom-left  (-halfX, -halfY)
+//             so 10-11 and 13-12 are the long sides (x)
 //             ("top" = top of the camera image)
 //   any other ID (e.g. the foam cubes, ID 0) = food item
 //
@@ -39,6 +40,8 @@ public:
     struct Point {
         double x = 0.0;
         double y = 0.0;
+        int id = -1;  // tag ID (food tags only)
+        float px = 0.0f, py = 0.0f;  // tag centre in the camera image, pixels
     };
 
     static constexpr int kRobotCount = 4;
@@ -49,10 +52,10 @@ public:
         : detector_(cv::aruco::getPredefinedDictionary(kTagDictionary)) {
         cornerIds_ = {10, 11, 12, 13};
         cornerArena_ = {
-            cv::Point2f(static_cast<float>(-halfX), static_cast<float>(halfY)),
-            cv::Point2f(static_cast<float>(halfX), static_cast<float>(halfY)),
-            cv::Point2f(static_cast<float>(halfX), static_cast<float>(-halfY)),
-            cv::Point2f(static_cast<float>(-halfX), static_cast<float>(-halfY))
+            cv::Point2f(static_cast<float>(-halfX), static_cast<float>(halfY)),   // 10
+            cv::Point2f(static_cast<float>(halfX), static_cast<float>(halfY)),    // 11
+            cv::Point2f(static_cast<float>(halfX), static_cast<float>(-halfY)),   // 12
+            cv::Point2f(static_cast<float>(-halfX), static_cast<float>(-halfY))   // 13
         };
     }
 
@@ -74,12 +77,12 @@ public:
         detector_.detectMarkers(image, corners, ids);
 
         std::map<int, std::vector<cv::Point2f>> found;
-        std::vector<cv::Point2f> foodPx;  // several cubes may share one ID
+        std::vector<std::pair<cv::Point2f, int>> foodPx;  // several cubes may share one ID
         for (std::size_t i = 0; i < ids.size(); ++i) {
             const bool robot = ids[i] >= kFirstRobotTag && ids[i] < kFirstRobotTag + kRobotCount;
             const bool corner = ids[i] >= cornerIds_.front() && ids[i] <= cornerIds_.back();
             if (robot || corner) found[ids[i]] = corners[i];
-            else foodPx.push_back(centre(corners[i]));
+            else foodPx.push_back({centre(corners[i]), ids[i]});
         }
 
         // Calibrate (or re-calibrate) when all four corner tags are visible.
@@ -115,8 +118,8 @@ public:
         food_.clear();
         if (calibrated_) {
             for (const auto& px : foodPx) {
-                const cv::Point2f p = toArena(px);
-                food_.push_back({p.x, p.y});
+                const cv::Point2f p = toArena(px.first);
+                food_.push_back({p.x, p.y, px.second, px.first.x, px.first.y});
             }
         }
 

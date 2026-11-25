@@ -1,7 +1,8 @@
 #include "EpuckHardware.h"
 #include <iostream>
-int main() {
-    EpuckHardware robot("172.20.10.2");
+// Run: ./test_sensors [robot IP]   (default 172.20.10.2)
+int main(int argc, char** argv) {
+    EpuckHardware robot(argc > 1 ? argv[1] : "172.20.10.2");
     if (!robot.connect()) {
         std::cerr << "Wi-Fi connection failed\n";
         return 1;

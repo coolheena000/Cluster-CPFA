@@ -51,3 +51,12 @@ epuck2_main_flash/*
 !epuck2_main_flash/flash_main.sh
 epuck2_wifi_flash/*
 !epuck2_wifi_flash/flash_slow.sh
+
+# New port and review copy (override the CPFA* and *.csv rules above)
+!physical_port/CPFA_*
+!physical_cpfa_code/*/CPFA_*
+!physical_cpfa_code/7_results/*.csv
+!sim_check/*.xml
+physical_port/test/carlos_extract.inc
+# Personal study notes
+MY_CPFA_NOTES.md

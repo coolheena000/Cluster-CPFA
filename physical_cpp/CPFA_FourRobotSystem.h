@@ -239,6 +239,16 @@ EpuckSensors getRobotSensors(std::size_t robotIndex) const {
     return robots_[robotIndex]->bridge.getSensors();
 }
 
+void setRobotBodyLed(std::size_t robotIndex, bool on) {
+    if (robotIndex >= robots_.size()) return;
+    robots_[robotIndex]->hardware.setBodyLed(on);
+}
+
+void playRobotSound(std::size_t robotIndex, uint8_t soundBits) {
+    if (robotIndex >= robots_.size()) return;
+    robots_[robotIndex]->hardware.playSound(soundBits);
+}
+
 bool stopRobot(std::size_t robotIndex) {
     if (robotIndex >= robots_.size()) return false;
     return robots_[robotIndex]->hardware.stop();

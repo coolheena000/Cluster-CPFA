@@ -116,6 +116,13 @@ public:
         const double dx = target.x - pose.x;
         const double dy = target.y - pose.y;
 
+        // Physical robot: keep the current 8 cm step until the robot reaches it
+        // (within 5 cm). The e-puck covers only ~2 cm per half second, so a new
+        // target every call made it stop and turn instead of moving forward.
+        // After 4 s (8 calls) it gets a new step anyway, e.g. if blocked.
+        if (std::hypot(dx, dy) >= 0.05 && ++searchStepAge < 8) return;
+        searchStepAge = 0;
+
         // Preserve Carlos's original squared-distance comparison.
         if (dx * dx + dy * dy < 0.05) {
 
@@ -132,9 +139,8 @@ public:
             double rotation = gaussianSample * uninformedSearchVariation;
 
             if (isInformed) {
-    // Carlos: informed search picks a new target only once IsAtTarget().
-    if (std::hypot(dx, dy) >= 0.05) return;
-
+    // Carlos: informed search picks a new target only once IsAtTarget()
+    // (checked above for both search types).
     const double pi = std::acos(-1.0);
     const double twoPi = 2.0 * pi;
 
@@ -297,6 +303,7 @@ void returning(
 } 
 // Carlos CPFA: surveying four directions
 unsigned int surveyCount = 0;
+unsigned int searchStepAge = 0;  // half-second calls since the last search step
 
 void surveying(
     const CPFAPose& pose,

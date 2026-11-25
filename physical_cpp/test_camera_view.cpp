@@ -19,8 +19,8 @@
 
 int main(int argc, char** argv) {
     const int cameraIndex = argc > 1 ? std::atoi(argv[1]) : 0;
-    const double halfX = argc > 3 ? std::atof(argv[2]) : 0.60;
-    const double halfY = argc > 3 ? std::atof(argv[3]) : 0.40;
+    const double halfX = argc > 3 ? std::atof(argv[2]) : 1.06;
+    const double halfY = argc > 3 ? std::atof(argv[3]) : 0.685;
 
     cv::VideoCapture cap(cameraIndex);
     if (!cap.isOpened()) {

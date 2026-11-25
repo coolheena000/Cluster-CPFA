@@ -3,13 +3,16 @@
 // Stops early if something is close in front (IR0 / IR7) or on Ctrl+C.
 //
 // Build: clang++ -std=c++17 test_motor_move.cpp EpuckHardware.cpp -o test_motor_move
-// Run:   ./test_motor_move 172.20.10.2
+// Run:   ./test_motor_move IP [seconds per step] [speed]
+//        Easier: ./robot_motor.sh 05367 2 300   (finds the robot by MAC first)
 
 #include "EpuckHardware.h"
 #include "CPFA_MotorAdapter.h"
 
 #include <chrono>
 #include <csignal>
+#include <cstdio>
+#include <cstdlib>
 #include <iostream>
 #include <thread>
 
@@ -20,7 +23,12 @@ int main(int argc, char** argv) {
     std::signal(SIGINT, onSignal);
 
     const std::string ip = argc > 1 ? argv[1] : "172.20.10.2";
-    const int16_t speed = 200;               // steps/s, about 2.6 cm/s
+    const double seconds = argc > 2 ? std::atof(argv[2]) : 1.0;  // per step
+    const int16_t speed = static_cast<int16_t>(argc > 3 ? std::atoi(argv[3]) : 200);  // steps/s, max 400
+    // e-puck2: 1000 steps = 0.1288 m, wheel axle 0.053 m.
+    const double metres = speed * 0.1288 / 1000.0 * seconds;
+    std::printf("Each step %.1f s at speed %d. Expected: FORWARD/BACK %.1f cm, LEFT/RIGHT %.0f degrees\n",
+                seconds, speed, metres * 100.0, 2.0 * metres / 0.053 * 180.0 / 3.141592653589793);
     const uint16_t frontObstacle = 300;      // IR0 / IR7 value that means "too close"
 
     EpuckHardware robot(ip);
@@ -46,7 +54,7 @@ int main(int argc, char** argv) {
         }
 
         // Speeds are sent with each sensor request, 10 times per second.
-        for (int i = 0; i < 10 && !gStop; ++i) {
+        for (int i = 0; i < static_cast<int>(seconds * 10 + 0.5) && !gStop; ++i) {
             EpuckSensors s;
             if (!robot.readSensors(s)) { ok = false; gStop = 1; break; }
 

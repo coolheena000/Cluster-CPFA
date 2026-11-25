@@ -2,6 +2,9 @@
 #include "EpuckHardware.h"
 
 #include <arpa/inet.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <sys/ioctl.h>
 #include <sys/socket.h>
 #include <sys/time.h>
 #include <unistd.h>
@@ -87,6 +90,10 @@ bool EpuckHardware::connect() {
     setsockopt(socket_, SOL_SOCKET, SO_SNDTIMEO,
                &timeout, sizeof(timeout));
 
+    // Send each small command packet at once.
+    int noDelay = 1;
+    setsockopt(socket_, IPPROTO_TCP, TCP_NODELAY, &noDelay, sizeof(noDelay));
+
     sockaddr_in address{};
     address.sin_family = AF_INET;
     address.sin_port = htons(static_cast<uint16_t>(port_));
@@ -132,6 +139,9 @@ bool EpuckHardware::sendRequest() {
     request[4] = static_cast<uint8_t>(static_cast<uint16_t>(left_) >> 8);
     request[5] = static_cast<uint8_t>(right_);
     request[6] = static_cast<uint8_t>(static_cast<uint16_t>(right_) >> 8);
+    request[7] = leds_;
+    request[20] = sound_;  // speaker; sent once so the sound is not restarted
+    sound_ = 0;
 
     size_t sent = 0;
 
@@ -163,6 +173,15 @@ bool EpuckHardware::receiveSensors(EpuckSensors& sensors) {
     std::vector<uint8_t> payload;
     if (!recvPacket(socket_, 0x02, payload)) return false;
 
+    // Use the newest reply: if whole packets are already waiting, read them too
+    // so the socket never fills up behind the control loop.
+    int waiting = 0;
+    while (ioctl(socket_, FIONREAD, &waiting) == 0 &&
+           waiting >= static_cast<int>(kSensorsPacketSize + 1)) {
+        if (!recvPacket(socket_, 0x02, payload)) return false;
+        ++extraPackets_;
+    }
+
     // Proximity values start at payload byte 37 (byte 38 counting the header).
     for (size_t i = 0; i < 8; ++i) {
         size_t offset = 37 + 2 * i;
@@ -177,6 +196,10 @@ bool EpuckHardware::receiveSensors(EpuckSensors& sensors) {
 }
 
 void EpuckHardware::disconnect() {
+    if (extraPackets_ > 0) {
+        std::cout << ip_ << ": skipped " << extraPackets_ << " extra sensor packets\n";
+        extraPackets_ = 0;
+    }
     if (socket_ >= 0) {
         ::close(socket_);
         socket_ = -1;
@@ -204,6 +227,7 @@ bool EpuckHardware::setWheelSpeeds(
 bool EpuckHardware::stop() {
     left_ = 0;
     right_ = 0;
+    leds_ = 0;
     EpuckSensors ignored;
     return readSensors(ignored);
 }
@@ -263,4 +287,13 @@ bool EpuckHardware::saveImageBmp(const std::string& path,
         }
     }
     return static_cast<bool>(f);
+}
+
+void EpuckHardware::playSound(uint8_t soundBits) {
+    sound_ = soundBits;
+}
+
+void EpuckHardware::setBodyLed(bool on) {
+    if (on) leds_ |= 0x10;
+    else leds_ &= static_cast<uint8_t>(~0x10);
 }

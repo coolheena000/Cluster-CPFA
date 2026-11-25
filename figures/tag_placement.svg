@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1500" viewBox="0 0 1600 1500" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d2420"/></marker></defs>
+<rect width="1600" height="1500" fill="#fff"/>
+<text x="80" y="70" font-size="36" font-weight="700" fill="#1d2420" text-anchor="start">Where to put the AprilTags on the arena table</text>
+<text x="80" y="108" font-size="20" font-weight="400" fill="#55625b" text-anchor="start">8 ft x 5 ft arena, inside the wooden frame. All corner tags lie FLAT on the arena floor.</text>
+<text x="80" y="165" font-size="24" font-weight="700" fill="#1d2420" text-anchor="start">1. Top view (what the overhead camera sees)</text>
+<rect x="106" y="191" width="1108" height="728" rx="4" fill="#c9a46a"/>
+<rect x="130" y="215" width="1060" height="680" fill="#eef1ee"/>
+<text x="660.0" y="181" font-size="18" font-weight="400" fill="#7a5a2a" text-anchor="middle">wooden frame</text>
+<rect x="132.0" y="217.0" width="78" height="78" fill="#fff" stroke="#999"/>
+<rect x="136.0" y="221.0" width="70" height="70" fill="#111"/><rect x="150.0" y="235.0" width="17.5" height="17.5" fill="#fff"/><rect x="174.5" y="259.5" width="15.4" height="15.4" fill="#fff"/>
+<circle cx="171.0" cy="256.0" r="4" fill="#b3362c"/>
+<text x="171.0" y="205.0" font-size="20" font-weight="700" fill="#1d2420" text-anchor="middle">Tag 10</text>
+<rect x="1110.0" y="217.0" width="78" height="78" fill="#fff" stroke="#999"/>
+<rect x="1114.0" y="221.0" width="70" height="70" fill="#111"/><rect x="1128.0" y="235.0" width="17.5" height="17.5" fill="#fff"/><rect x="1152.5" y="259.5" width="15.4" height="15.4" fill="#fff"/>
+<circle cx="1149.0" cy="256.0" r="4" fill="#b3362c"/>
+<text x="1149.0" y="205.0" font-size="20" font-weight="700" fill="#1d2420" text-anchor="middle">Tag 11</text>
+<rect x="1110.0" y="815.0" width="78" height="78" fill="#fff" stroke="#999"/>
+<rect x="1114.0" y="819.0" width="70" height="70" fill="#111"/><rect x="1128.0" y="833.0" width="17.5" height="17.5" fill="#fff"/><rect x="1152.5" y="857.5" width="15.4" height="15.4" fill="#fff"/>
+<circle cx="1149.0" cy="854.0" r="4" fill="#b3362c"/>
+<text x="1149.0" y="919.0" font-size="20" font-weight="700" fill="#1d2420" text-anchor="middle">Tag 12</text>
+<rect x="132.0" y="815.0" width="78" height="78" fill="#fff" stroke="#999"/>
+<rect x="136.0" y="819.0" width="70" height="70" fill="#111"/><rect x="150.0" y="833.0" width="17.5" height="17.5" fill="#fff"/><rect x="174.5" y="857.5" width="15.4" height="15.4" fill="#fff"/>
+<circle cx="171.0" cy="854.0" r="4" fill="#b3362c"/>
+<text x="171.0" y="919.0" font-size="20" font-weight="700" fill="#1d2420" text-anchor="middle">Tag 13</text>
+<rect x="171.0" y="256.0" width="978.0" height="598.0" fill="none" stroke="#2f6fb3" stroke-width="2.5" stroke-dasharray="10 7"/>
+<line x1="171.0" y1="366.0" x2="1149.0" y2="366.0" stroke="#2f6fb3" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
+<text x="660.0" y="356.0" font-size="20" font-weight="700" fill="#2f6fb3" text-anchor="middle">L = measure centre to centre (about 2.3 m)</text>
+<line x1="301.0" y1="256.0" x2="301.0" y2="854.0" stroke="#2f6fb3" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
+<text x="313.0" y="563.0" font-size="20" font-weight="700" fill="#2f6fb3" text-anchor="start">W (about 1.4 m)</text>
+<circle cx="660.0" cy="555.0" r="106.30434782608697" fill="#e1eee6" stroke="#2e7d4f" stroke-width="3" stroke-dasharray="9 6"/>
+<text x="660.0" y="551.0" font-size="24" font-weight="700" fill="#2e7d4f" text-anchor="middle">NEST (0, 0)</text>
+<text x="660.0" y="579.0" font-size="18" font-weight="400" fill="#2e7d4f" text-anchor="middle">centre of the 4 tags, r = 0.25 m</text>
+<text x="1250" y="235" font-size="20" font-weight="700" fill="#1d2420" text-anchor="start">Corner detail</text>
+<rect x="1250" y="255" width="170" height="170" fill="#eef1ee"/><rect x="1250" y="255" width="170" height="22" fill="#c9a46a"/><rect x="1250" y="255" width="22" height="170" fill="#c9a46a"/>
+<rect x="1275.0" y="280.0" width="98" height="98" fill="#fff" stroke="#999"/>
+<rect x="1279.0" y="284.0" width="90" height="90" fill="#111"/><rect x="1297.0" y="302.0" width="22.5" height="22.5" fill="#fff"/><rect x="1328.5" y="333.5" width="19.8" height="19.8" fill="#fff"/>
+<circle cx="1324" cy="329" r="4" fill="#b3362c"/>
+<text x="1250" y="455" font-size="16" font-weight="400" fill="#55625b" text-anchor="start">Push the tag into the</text>
+<text x="1250" y="475" font-size="16" font-weight="400" fill="#55625b" text-anchor="start">corner, touching both</text>
+<text x="1250" y="495" font-size="16" font-weight="400" fill="#55625b" text-anchor="start">walls. Tape on the white</text>
+<text x="1250" y="515" font-size="16" font-weight="400" fill="#55625b" text-anchor="start">border only.</text>
+<text x="1250" y="555" font-size="16" font-weight="700" fill="#b3362c" text-anchor="start">Red dot = tag centre.</text>
+<text x="1250" y="575" font-size="16" font-weight="400" fill="#55625b" text-anchor="start">Measure L and W</text>
+<text x="1250" y="595" font-size="16" font-weight="400" fill="#55625b" text-anchor="start">between red dots.</text>
+<text x="80" y="1040" font-size="24" font-weight="700" fill="#1d2420" text-anchor="start">2. Side view: floor or raised?</text>
+<line x1="140" y1="1370" x2="1460" y2="1370" stroke="#1d2420" stroke-width="3"/>
+<rect x="140" y="1330" width="22" height="40" fill="#c9a46a"/><rect x="1438" y="1330" width="22" height="40" fill="#c9a46a"/>
+<text x="800" y="1400" font-size="18" font-weight="400" fill="#55625b" text-anchor="middle">arena floor (table)</text>
+<rect x="760" y="1070" width="80" height="38" rx="6" fill="#1d2420"/><circle cx="800" cy="1108" r="9" fill="#fff"/>
+<text x="860" y="1096" font-size="18" font-weight="400" fill="#55625b" text-anchor="start">overhead webcam, about 2 m above the floor</text>
+<line x1="780" y1="1112" x2="190" y2="1364" stroke="#c7cfca" stroke-dasharray="7 7"/><line x1="820" y1="1112" x2="1410" y2="1364" stroke="#c7cfca" stroke-dasharray="7 7"/>
+<rect x="175" y="1365" width="30" height="5" fill="#111"/>
+<rect x="1395" y="1365" width="30" height="5" fill="#111"/>
+<text x="240" y="1356" font-size="18" font-weight="700" fill="#2e7d4f" text-anchor="start">corner tag: FLAT on the floor</text>
+<rect x="600" y="1320" width="70" height="44" rx="6" fill="#7da37f"/><circle cx="612" cy="1366" r="5" fill="#333"/><circle cx="658" cy="1366" r="5" fill="#333"/>
+<rect x="600" y="1314" width="70" height="6" fill="#111"/>
+<text x="635" y="1300" font-size="18" font-weight="700" fill="#1d2420" text-anchor="middle">robot tag: on top of the robot (~5 cm high)</text>
+<rect x="1000" y="1310" width="60" height="60" fill="#e8902a" stroke="#7a4a08"/><rect x="1010" y="1306" width="40" height="4" fill="#111"/>
+<text x="1030" y="1294" font-size="18" font-weight="700" fill="#1d2420" text-anchor="middle">food cube: tag face UP</text>
+<rect x="1200" y="1240" width="10" height="130" fill="#999"/><rect x="1186" y="1200" width="38" height="40" fill="#111"/>
+<line x1="1175" y1="1185" x2="1235" y2="1255" stroke="#b3362c" stroke-width="5"/><line x1="1235" y1="1185" x2="1175" y2="1255" stroke="#b3362c" stroke-width="5"/>
+<text x="1250" y="1220" font-size="18" font-weight="700" fill="#b3362c" text-anchor="start">Do NOT raise corner tags</text>
+<text x="1250" y="1244" font-size="16" font-weight="400" fill="#b3362c" text-anchor="start">on a stand or tilt them</text>
+<text x="80" y="1460" font-size="17" font-weight="400" fill="#55625b" text-anchor="start">Corner tags define the floor plane. Raising or tilting them shifts every position. Robot tags 5 cm up cause only ~1-3 cm error with the camera at 2 m.</text>
+</svg>
