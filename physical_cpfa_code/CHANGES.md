@@ -1,6 +1,6 @@
 # What I changed, and why
 
-Changes since my last commit (15 October 2026), found while testing on the real
+Changes after the 15 October 2026 commit, found while testing on the real
 robots. Line numbers point to the working code in `physical_cpp/`.
 **(new)** = not part of Carlos's algorithm.
 
@@ -12,14 +12,14 @@ robots. Line numbers point to the working code in `physical_cpp/`.
 - **Before:** a new 8 cm search target every half second.
 - **After:** a new target only when the robot reaches the old one (within 5 cm), or after 4 seconds.
 - **Why:** the e-puck moves about 2 cm in half a second, so it kept stopping to turn.
-- **Result:** Run 6 → Run 7: forward moves 77 → 106, area covered 10 → 17 cells.
+- **Result:** Run 6 → Run 7: forward moves 77 → 106, area covered 10 → 17 cells (15 cm cells; 7 → 12 with 20 cm cells).
 
 ```cpp
 if (std::hypot(dx, dy) >= 0.05 && ++searchStepAge < 8) return;
 ```
 
 ## 2. Robot always gets the newest command
-`EpuckHardware.cpp`, lines 95 and 176
+`EpuckHardware.cpp`, lines 95 and 179
 
 - **Before:** the Mac read one sensor reply per step, and small commands could wait in the network.
 - **After:** the Mac reads all waiting replies and keeps the newest one, and commands are sent at once (`TCP_NODELAY`).
@@ -52,7 +52,7 @@ if (std::hypot(dx, dy) >= 0.05 && ++searchStepAge < 8) return;
 - **Result:** Run 8, 10 minutes: 7 food, area covered 35 cells.
 
 ## 6. Robots stop at the end
-`run_four_robots.cpp`, line 436
+`run_four_robots.cpp`, line 437
 
 - **Before:** STOP sent once, then the connection closed.
 - **After:** STOP sent 5 times, 0.15 s apart, then disconnect.
@@ -73,7 +73,7 @@ if (std::hypot(dx, dy) >= 0.05 && ++searchStepAge < 8) return;
 - **Why:** search targets were too close to the walls and robots hit them.
 
 ## 9. Arena size and corner tags
-`run_four_robots.cpp`, line 44
+`run_four_robots.cpp`, line 45
 
 - **Before:** 2.54 × 1.68 m
 - **After:** temporary square arena, 59 × 59 in (1.50 m), because half of the table broke.

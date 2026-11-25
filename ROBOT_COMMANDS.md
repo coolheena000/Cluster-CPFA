@@ -3,6 +3,10 @@
 All commands used to set up, test and run the physical CPFA on the e-puck2 robots.
 Run every command from a terminal on the Mac.
 
+> **Older setup (October, phone hotspot).** The November runs used the NETGEAR15 router,
+> `run_cpfa.sh` (finds robots by MAC address) and these tags:
+> 05367 = tag 1, 05333 = tag 2, 05359 = tag 3, 05417 = tag 4.
+
 ## Robots
 
 | Robot | Wi-Fi name | IP | Robot tag | Status |

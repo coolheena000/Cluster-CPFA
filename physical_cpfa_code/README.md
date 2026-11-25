@@ -65,8 +65,10 @@ Temporary square arena 59 x 59 in (half of the table is broken), 16 food tags,
 |---|---|---|---|---|
 | run05 | 2 | 16 cubes | 600 s | 10 |
 | run06 | 1 | 16 tags | 300 s | 3 |
-| run07 (search fix) | 1 | 16 tags | 300 s | 3, with twice the area covered |
-| run08 (faster) | 1 | 16 tags | 600 s | 7 |
+| run07 (search fix) | 1 | 16 tags | 300 s | 3; more area covered (12 cells of 20 cm, run06: 7) |
+| run08 (faster, 13 cm food distance) | 1 | 16 tags | 600 s | 7 |
+| run09 (5 cm food distance; log overwritten, result from the video) | 1 | 16 tags | 601 s | 5 |
+| run10 (Wi-Fi lost) | 1 | 12 tags | about 251 s active | 1 |
 
 These are test runs. The setup changed between them, so they are not repeated
 trials of one experiment.

@@ -94,7 +94,8 @@ system.stepRobotCPFA(
 
 assert(system.getRobotState(0) ==
        CPFAPhysicalCore::State::SEARCHING);
-system.updateRobotPose(0, 0.66, 0.5, 0.0);
+// Within 5 cm of the 8 cm search step, so a new search decision is made.
+system.updateRobotPose(0, 0.60, 0.5, 0.0);
 system.stepRobotCPFA(
     0, true, false, false,
     0.0, 0.0, 0.5, 0.5,
