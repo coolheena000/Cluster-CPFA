@@ -1,7 +1,7 @@
 #!/bin/bash
-# Carlos ka baseline CPFA ARGoS mein, bina GUI ke, teeno food distributions.
+# Runs Carlos's baseline CPFA in ARGoS without the GUI, on all three food distributions.
 # Usage: ./sim_check/run_sim_check.sh [runs_per_distribution]   (default 3)
-# Har run ~3 second. Output: har run ka "time, food collected" aur average.
+# Each run takes about 3 seconds. Output: food collected per run, and the average.
 
 RUNS=${1:-3}
 HERE="$(cd "$(dirname "$0")" && pwd)"
